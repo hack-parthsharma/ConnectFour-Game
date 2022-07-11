@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css?family=Staatliches&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="utf-8" />
+        <title>connectFour</title>
+    </head>
+    <body>
+        <div id="game">
+            <h1>connectFour</h1>
+            <div id="settings">
+                <div class="input player1">
+                    <label for="player1">Player One</label>
+                    <input
+                        id="player1"
+                        type="text"
+                        name="player1"
+                        placeholder="Funky Chicken"
+                    />
+                </div>
+                <div class="input player2">
+                    <label for="player2">Player Two</label>
+                    <input
+                        id="player2"
+                        type="text"
+                        name="player2"
+                        placeholder="Rubber Duck"
+                    />
+                </div>
+
+                <div class="game-selector">
+                    <div class="standard selected">standard</div>
+                    <div class="custom">custom</div>
+                </div>
+                <div class="standard-game show">
+                    <p>The standard game has 6 rows and 7 columns</p>
+                </div>
+                <div class="custom-game">
+                    <div>
+                        <label for="userR">Number of Rows</label>
+                        <input
+                            id="userR"
+                            type="number"
+                            name="userR"
+                            min="4"
+                            max="8"
+                        />
+                        <p>Choose a number between 4 and 8</p>
+                    </div>
+                    <div>
+                        <label for="userC">Number of Columns</label>
+                        <input
+                            id="userC"
+                            type="number"
+                            name="userC"
+                            min="5"
+                            max="10"
+                        />
+                        <p>Choose a number between 5 and 10</p>
+                    </div>
+                </div>
+
+                <div id="start-game" class="play-button">
+                    Play!
+                </div>
+            </div>
+            <div id="board">
+                <div class="end-game">
+                    <div class="end-text"></div>
+                    <div class="top-winners"></div>
+                    <div class="end-buttons">
+                        <div class="settings-button">Settings</div>
+                        <div class="reset-button">New game</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</html>

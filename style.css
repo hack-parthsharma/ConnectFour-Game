@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #f2f3f3;
+    font-family: "Staatliches", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+}
+h1 {
+    color: #3c4143;
+    font-size: 48px;
+    line-height: 0.8em;
+    letter-spacing: 0.8em;
+    transform: translateX(0.4em);
+}
+#settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #3c4143;
+    padding: 40px 60px;
+    color: #fff;
+    border-radius: 5px;
+}
+#settings .play-button {
+    align-self: center;
+    width: 100px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.game-selector {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.standard,
+.custom {
+    width: 50%;
+    font-family: "Staatliches", sans-serif;
+    color: #fff;
+    line-height: 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.selected {
+    background: #fff;
+    color: #3c4143;
+}
+.custom-game,
+.standard-game {
+    display: none;
+    overflow: hidden;
+    text-align: center;
+}
+.custom-game p,
+.standard-game p {
+    font-family: monospace;
+    font-size: 16px;
+    color: #6d7679;
+}
+
+.show {
+    display: block;
+}
+.input {
+    height: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    width: 500px;
+}
+input {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.5em;
+    font-family: monospace;
+    text-align: center;
+    margin-left: 20px;
+    vertical-align: middle;
+    background: #f2f3f3;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.2s 0.2s ease;
+    opacity: 0;
+}
+input[type="number"] {
+    width: 50px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#board {
+    position: relative;
+    overflow: hidden;
+}
+#board-header {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    padding-bottom: 10px;
+}
+#board-body {
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    background: #bcc1c3;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+#board-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Staatliches", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+#board-footer div {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.header {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.slot {
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: -3px -3px 3px #868f92;
+    transition: all 1s;
+}
+
+.end-game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: top 2s ease-in;
+    z-index: 10;
+}
+.end-text {
+    color: #fff;
+    font-size: 48px;
+    font-family: "Staatliches", sans-serif;
+}
+.end-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.reset-button,
+.play-button,
+.settings-button {
+    font-family: "Staatliches", sans-serif;
+    background: #fff;
+    color: #3c4143;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 0;
+    display: inline;
+}
+.reset-button:hover {
+    background: #f2f3f3;
+}
+.on {
+    top: 0;
+    background: #3c4143;
+    opacity: 1;
+}
+.top-winners {
+    width: 100%;
+    font-family: monospace;
+    color: #fff;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.top-winners p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.top-winner {
+    font-size: 16px;
+}
+.player1 {
+    background: rgb(255, 176, 0);
+}
+.player2 {
+    background: rgb(52, 0, 181);
+}
